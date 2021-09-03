@@ -1,0 +1,18 @@
+{
+    "link": {
+        "example": {
+            "name": "Example Link",
+            "description": "Description of example link",
+            "icon": {
+                "type": "bootstrap|custom|bytesize",
+                "name": "person"
+            },
+            "url": "https://example.chi.ac.uk",
+            "source": "example.chi.ac.uk",
+            "options": {
+                "color": "black",
+                "bg-color": "blue"
+            }
+        }
+    }
+}
