@@ -4,8 +4,8 @@
             "name": "Example Link",
             "description": "Description of example link",
             "icon": {
-                "type": "bootstrap|custom|bytesize",
-                "name": "person"
+                "type": "bootstrap|bytesize|drip|custom",
+                "name": "svgname"
             },
             "url": "https://example.chi.ac.uk",
             "source": "example.chi.ac.uk",
