@@ -1,5 +1,5 @@
 {
-    "link": {
+    "links": {
         "example": {
             "name": "Example Link",
             "description": "Description of example link",
@@ -9,10 +9,9 @@
             },
             "url": "https://example.chi.ac.uk",
             "source": "example.chi.ac.uk",
-            "options": {
-                "color": "black",
-                "bg-color": "blue"
-            }
+            "tags": ["staff", "student"],
+            "position": "2",
+            "hide": "false"
         }
     }
 }

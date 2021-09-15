@@ -1,3 +1,5 @@
 config.php
 data.json
 api/icons/custom/*.svg
+vendor/
+backup/*.json
