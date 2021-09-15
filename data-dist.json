@@ -1,8 +1,8 @@
 {
     "links": {
         "email": {
-            "name": "Emaill / Office 365",
-            "description": "Emaill / Office 365",
+            "name": "Email / Office 365",
+            "description": "Email / Office 365",
             "icon": {
                 "type": "bootstrap",
                 "name": "envelope-fill"
@@ -16,8 +16,8 @@
             "hide": "true"
         },
         "office": {
-            "name": "Emaill / Office 365",
-            "description": "Emaill / Office 365",
+            "name": "Email / Office 365",
+            "description": "Email / Office 365",
             "icon": {
                 "type": "custom",
                 "name": "office"
