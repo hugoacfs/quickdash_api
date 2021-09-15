@@ -57,6 +57,11 @@ while ($gettinginput) {
     echo PHP_EOL;
     $input['tags'] = filter_var($input['tags'], FILTER_SANITIZE_STRIPPED);
 
+    echo 'Position (leave blank if not needed): ';
+    $input['position'] = fgets(STDIN);
+    echo PHP_EOL;
+    $input['position'] = filter_var($input['position'], FILTER_SANITIZE_STRIPPED);
+
     $gettinginput = false;
 
     foreach ($input as $key => $value) {

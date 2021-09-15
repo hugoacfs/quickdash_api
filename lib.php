@@ -49,8 +49,8 @@ function loadsvgraw(string $name = 'bootstrap', string $type = 'bootstrap') : st
             $CFG->dirsept .
             $name . '.svg';
     if (!file_exists($path)) {
-        // If file does not exist, load default.
-        return loadsvgraw();
+        // If file does not exist, load something default.
+        return loadsvgraw('link-45deg');
     }
     // We must remove any set sizes, so we can control this in CSS.
     $svg = file_get_contents($path);
@@ -85,6 +85,7 @@ function fetch_prepared_data(array $tags = [], string $dbmode = '', string $svgm
             break;
     }
     $links = [];
+    $positionlinks = [];
     foreach ($data['links'] as $key => $item) {
         if (!is_array($item)) {
             $item = (array) $item;
@@ -103,8 +104,14 @@ function fetch_prepared_data(array $tags = [], string $dbmode = '', string $svgm
         if ($svgmode == 'raw') {
             $item['svg'] = loadsvgraw($item['icon']['name'], $item['icon']['type']);
         }
-        $links[$key] = $item;
+        if (array_key_exists('position', $item)) {
+            $positionlinks[$item['position']] = $item;
+        } else {
+            $links[$key] = $item;
+        }
     }
+    // Joining both arrays
+    $links = array_merge($positionlinks, $links);
     return $links;
 }
 
