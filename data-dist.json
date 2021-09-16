@@ -13,7 +13,8 @@
                 "staff",
                 "student"
             ],
-            "hide": "true"
+            "hide": "true",
+            "origin": "moodle"
         },
         "office": {
             "name": "Email / Office 365",
@@ -27,7 +28,8 @@
             "tags": [
                 "staff",
                 "student"
-            ]
+            ],
+            "origin": "office"
         },
         "mypages": {
             "name": "My Pages",
@@ -41,7 +43,8 @@
             "tags": [
                 "staff",
                 "student"
-            ]
+            ],
+            "origin": "moodle"
         },
         "librarypages": {
             "name": "Library Pages",
@@ -55,7 +58,8 @@
             "tags": [
                 "staff",
                 "student"
-            ]
+            ],
+            "origin": "moodle"
         },
         "panopto": {
             "name": "Panopto",
@@ -69,7 +73,8 @@
             "tags": [
                 "staff",
                 "student"
-            ]
+            ],
+            "origin": "panopto"
         },
         "studyskills": {
             "name": "Study Skills",
@@ -83,7 +88,8 @@
             "tags": [
                 "staff",
                 "student"
-            ]
+            ],
+            "origin": "moodle"
         },
         "chiview": {
             "name": "ChiView",
@@ -97,7 +103,8 @@
             "tags": [
                 "staff",
                 "student"
-            ]
+            ],
+            "origin": "chiview"
         },
         "handbook": {
             "name": "Student Handbook",
@@ -111,7 +118,8 @@
             "tags": [
                 "staff",
                 "student"
-            ]
+            ],
+            "origin": "ipps"
         },
         "careers": {
             "name": "Careers Page",
@@ -125,7 +133,8 @@
             "tags": [
                 "staff",
                 "student"
-            ]
+            ],
+            "origin": "moodle"
         },
         "computer": {
             "name": "Book a Computer",
@@ -139,7 +148,8 @@
             "tags": [
                 "staff",
                 "student"
-            ]
+            ],
+            "origin": "mypc"
         },
         "wellbeing": {
             "name": "Student Wellbeing",
@@ -153,7 +163,8 @@
             "tags": [
                 "staff",
                 "student"
-            ]
+            ],
+            "origin": "moodle"
         },
         "supportme": {
             "name": "Support Request",
@@ -167,7 +178,8 @@
             "tags": [
                 "staff",
                 "student"
-            ]
+            ],
+            "origin": "supportme"
         },
         "helpsite": {
             "name": "Help Site",
@@ -181,7 +193,8 @@
             "tags": [
                 "staff",
                 "student"
-            ]
+            ],
+            "origin": "help"
         },
         "covid19": {
             "name": "COVID-19",
@@ -195,7 +208,8 @@
             "tags": [
                 "staff",
                 "student"
-            ]
+            ],
+            "origin": "help"
         }
     }
 }

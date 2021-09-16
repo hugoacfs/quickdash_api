@@ -66,7 +66,7 @@ function loadsvgraw(string $name = 'bootstrap', string $type = 'bootstrap') : st
     return $xml->asXML();
 }
 
-function fetch_prepared_data(array $tags = [], string $dbmode = '', string $svgmode = 'raw') {
+function fetch_prepared_data(array $tags = [], string $referrer = '', string $dbmode = '', string $svgmode = 'raw') {
     global $CFG;
     if ($dbmode == '') {
         $dbmode = $CFG->dbmode;
@@ -100,6 +100,9 @@ function fetch_prepared_data(array $tags = [], string $dbmode = '', string $svgm
             if ($counttags < 1) {
                 continue;
             }
+        }
+        if (isset($item['origin']) && $item['origin'] != $referrer) {
+            $item['target'] = 'new';
         }
         if ($svgmode == 'raw') {
             $item['svg'] = loadsvgraw($item['icon']['name'], $item['icon']['type']);

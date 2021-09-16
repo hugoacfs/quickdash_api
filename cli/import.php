@@ -11,7 +11,7 @@ require_once('../config.php');
  * Using the data.json file, this script generates a MongoDB links collection.
  */
 
-$data = fetch_prepared_data([], 'json', 'none');
+$data = fetch_prepared_data([], '', 'json', 'none');
 $collection = $DB->selectCollection('links');
 
 foreach ($data as $item) {
