@@ -94,6 +94,10 @@ function fetch_prepared_data(array $tags = [], string $referrer = '', string $db
         if (array_key_exists('hide', $item) && $item['hide'] == 'true') {
             continue;
         }
+        // We do not want to show link to self in dashboard.
+        if ($key == $referrer) {
+            continue;
+        }
         if (!empty($tags)) {
             $intersect = array_intersect($tags, $item['tags']) ?? [];
             $counttags = count($intersect);
