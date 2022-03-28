@@ -10,33 +10,6 @@ function loaddata_json() {
     return $data;
 }
 
-function loaddata_mongo() {
-    global $DB;
-    $data = [];
-    $col = $DB->selectCollection('links');
-    $cursor = $col->find();
-    foreach ($cursor as $item) {
-        $data[$item['idstring']] = $item;
-    }
-    return ['links' => $data];
-}
-
-/**
- * @deprecated
- */
-function loadsvghtml(string $name, string $type) : string {
-    $svg = '';
-    switch ($type) {
-        case 'bootstrap':
-            $svg = '<i class="bi-' . $name . '"></i>';
-            break;
-        default:
-            $svg = loadsvgraw($name, $type);
-            break;
-    }
-    return $svg;
-}
-
 function loadsvgraw(string $name = 'bootstrap', string $type = 'bootstrap') : string {
     global $CFG;
     $path = $CFG->dirroot .
@@ -66,24 +39,9 @@ function loadsvgraw(string $name = 'bootstrap', string $type = 'bootstrap') : st
     return $xml->asXML();
 }
 
-function fetch_prepared_data(array $tags = [], string $referrer = '', string $dbmode = '', string $svgmode = 'raw') {
-    global $CFG;
-    if ($dbmode == '') {
-        $dbmode = $CFG->dbmode;
-    }
+function fetch_prepared_data(array $tags = [], string $referrer = '', string $svgmode = 'raw') {
     $data = [];
-    error_log("QUICKDASH API: $dbmode MODE ON");
-    switch ($dbmode) {
-        case 'mongo':
-            $data = loaddata_mongo();
-            break;
-        case 'json':
-            $data = loaddata_json();
-            break;
-        default:
-            $data = loaddata_json();
-            break;
-    }
+    $data = loaddata_json();
     $links = [];
     $positionlinks = [];
     foreach ($data['links'] as $key => $item) {
